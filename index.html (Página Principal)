@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMAC - Inclusão Digital para Idosos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/acessibilidade.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Acessibilidade -->
+    <div class="barra-acessibilidade" role="toolbar" aria-label="Ferramentas de acessibilidade">
+        <button id="btn-aumentar-fonte" onclick="aumentarFonte()" title="Aumentar fonte">
+            <span aria-hidden="true">A+</span>
+        </button>
+        <button id="btn-diminuir-fonte" onclick="diminuirFonte()" title="Diminuir fonte">
+            <span aria-hidden="true">A-</span>
+        </button>
+        <button id="btn-alto-contraste" onclick="toggleContraste()" title="Alto contraste">
+            👁️
+        </button>
+        <button id="btn-leitor" onclick="ativarLeitorTela()" title="Leitor de tela">
+            🔊
+        </button>
+        <button id="btn-noturno" onclick="toggleModoNoturno()" title="Modo noturno">
+            🌙
+        </button>
+    </div>
+
+    <!-- Menu Acessível -->
+    <nav class="menu-navegacao" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%234F46E5'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='40' font-weight='bold'%3EC%3C/text%3E%3C/svg%3E" alt="Logo COMAC" width="60">
+                <span class="nome-logo">COMAC</span>
+            </div>
+            
+            <button class="menu-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="menu-lista" id="menuLista">
+                <li><a href="index.html" class="ativo">🏠 Início</a></li>
+                <li><a href="paginas/tutoriais.html">📚 Tutoriais</a></li>
+                <li><a href="paginas/agendamentos.html">📅 Agendamentos</a></li>
+                <li><a href="paginas/noticias.html">📰 Notícias</a></li>
+                <li><a href="paginas/contato.html">📞 Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header/Banner -->
+    <header class="banner-principal">
+        <div class="container">
+            <div class="banner-conteudo">
+                <h1>Bem-vindo ao COMAC</h1>
+                <p class="subtitulo">Inclusão Digital para Terceira Idade</p>
+                <p class="descricao">Aprenda a usar tecnologia de forma simples, segura e divertida!</p>
+                <div class="botoes-banner">
+                    <a href="paginas/tutoriais.html" class="btn btn-primario">
+                        📱 Começar a Aprender
+                    </a>
+                    <a href="#ajuda" class="btn btn-secundario">
+                        ❓ Preciso de Ajuda
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Serviços -->
+    <section class="servicos" aria-labelledby="titulo-servicos">
+        <div class="container">
+            <h2 id="titulo-servicos" class="titulo-secao">Nossos Serviços</h2>
+            
+            <div class="grade-servicos">
+                <article class="cartao-servico" tabindex="0">
+                    <div class="icone-servico">💻</div>
+                    <h3>Aulas de Informática</h3>
+                    <p>Aulas presenciais para aprender desde o básico até atividades do dia a dia, como usar WhatsApp, fazer videochamadas e muito mais.</p>
+                    <a href="paginas/tutoriais.html" class="btn-card">Saiba Mais →</a>
+                </article>
+                
+                <article class="cartao-servico" tabindex="0">
+                    <div class="icone-servico">📱</div>
+                    <h3>Suporte com Celular</h3>
+                    <p>Aprenda a usar seu smartphone de forma segura. Enviamos mensagens, tirar fotos, fazer chamadas de vídeo com família.</p>
+                    <a href="paginas/tutoriais.html#celular" class="btn-card">Saiba Mais →</a>
+                </article>
+                
+                <article class="cartao-servico" tabindex="0">
+                    <div class="icone-servico">🌐</div>
+                    <h3>Internet Segura</h3>
+                    <p>Aprenda a navegar na internet com segurança, identificar golpes e proteger seus dados pessoais.</p>
+                    <a href="paginas/tutoriais.html#seguranca" class="btn-card">Saiba Mais →</a>
+                </article>
+                
+                <article class="cartao-servico" tabindex="0">
+                    <div class="icone-servico">📅</div>
+                    <h3>Agendamentos Online</h3>
+                    <p>Ajuda para marcar consultas médicas, agendar serviços e resolver pendências pela internet.</p>
+                    <a href="paginas/agendamentos.html" class="btn-card">Agendar Agora →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Tutoriais Rápidos -->
+    <section class="tutoriais-rapidos" aria-labelledby="titulo-tutoriais">
+        <div class="container">
+            <h2 id="titulo-tutoriais" class="titulo-secao">Tutoriais Mais Buscados</h2>
+            
+            <div class="grade-tutoriais">
+                <article class="card-tutorial" tabindex="0">
+                    <div class="video-placeholder">
+                        <span class="duracao">⏱️ 5 min</span>
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div class="conteudo-tutorial">
+                        <span class="tag-categoria">WhatsApp</span>
+                        <h3>Como Enviar Mensagens</h3>
+                        <p>Aprenda a enviar mensagens de texto e áudio pelo WhatsApp.</p>
+                        <button class="btn-assistir" onclick="abrirTutorial('whatsapp-mensagens')">
+                            Assistir Agora
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="card-tutorial" tabindex="0">
+                    <div class="video-placeholder">
+                        <span class="duracao">⏱️ 8 min</span>
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div class="conteudo-tutorial">
+                        <span class="tag-categoria">Videochamada</span>
+                        <h3>Fazendo Videochamadas</h3>
+                        <p>Conecte-se com familiares através de videochamadas.</p>
+                        <button class="btn-assistir" onclick="abrirTutorial('videochamadas')">
+                            Assistir Agora
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="card-tutorial" tabindex="0">
+                    <div class="video-placeholder">
+                        <span class="duracao">⏱️ 6 min</span>
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div class="conteudo-tutorial">
+                        <span class="tag-categoria">Fotos</span>
+                        <h3>Tirando Fotos Boas</h3>
+                        <p>Dicas simples para tirar fotos bonitas com seu celular.</p>
+                        <button class="btn-assistir" onclick="abrirTutorial('tirar-fotos')">
+                            Assistir Agora
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="card-tutorial" tabindex="0">
+                    <div class="video-placeholder">
+                        <span class="duracao">⏱️ 10 min</span>
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div class="conteudo-tutorial">
+                        <span class="tag-categoria">Segurança</span>
+                        <h3>Protegendo-se de Golpes</h3>
+                        <p>Saiba como identificar e evitar golpes na internet.</p>
+                        <button class="btn-assistir" onclick="abrirTutorial('seguranca')">
+                            Assistir Agora
+                        </button>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="centralizado">
+                <a href="paginas/tutoriais.html" class="btn btn-primario btn-grande">
+                    Ver Todos os Tutoriais 📚
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Ajuda -->
+    <section id="ajuda" class="ajuda-rapida" aria-labelledby="titulo-ajuda">
+        <div class="container">
+            <h2 id="titulo-ajuda" class="titulo-secao">Precisa de Ajuda?</h2>
+            
+            <div class="opcoes-ajuda">
+                <div class="opcao-ajuda">
+                    <div class="icone-ajuda">📞</div>
+                    <h3>Ligue para Nós</h3>
+                    <p>Equipe pronta para ajudar de segunda a sexta, das 8h às 17h.</p>
+                    <a href="tel:+5500000000000" class="btn-telefone">(00) 00000-0000</a>
+                </div>
+                
+                <div class="opcao-ajuda">
+                    <div class="icone-ajuda">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Mande uma mensagem e respondemos rapidinho!</p>
+                    <a href="https://wa.me/5500000000000" class="btn-whatsapp" target="_blank">
+                        💬 Falar no WhatsApp
+                    </a>
+                </div>
+                
+                <div class="opcao-ajuda">
+                    <div class="icone-ajuda">📧</div>
+                    <h3>E-mail</h3>
+                    <p>Envie suas dúvidas por e-mail.</p>
+                    <a href="mailto:ajuda@comac.org.br" class="btn-email">
+                        ✉️ ajuda@comac.org.br
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de depoimentos -->
+    <section class="depoimentos" aria-labelledby="titulo-depoimentos">
+        <div class="container">
+            <h2 id="titulo-depoimentos" class="titulo-secao">O que nossos alunos dizem</h2>
+            
+            <div class="carrossel-depoimentos" role="region" aria-label="Depoimentos de alunos">
+                <div class="depoimento ativo" id="depoimento1">
+                    <div class="aspas">"</div>
+                    <blockquote>
+                        <p>"Antes eu tinha medo do celular. Hoje mandoo mensagens para meus netos todo dia! Obrigada COMAC!"</p>
+                    </blockquote>
+                    <cite>— Maria Silva, 72 anos</cite>
+                </div>
+                
+                <div class="depoimento" id="depoimento2">
+                    <div class="aspas">"</div>
+                    <blockquote>
+                        <p>"Aprendi a fazer videochamada e agora vejo meus filhos toda semana pelo celular. É maravilhoso!"</p>
+                    </blockquote>
+                    <cite>— José Santos, 68 anos</cite>
+                </div>
+                
+                <div class="depoimento" id="depoimento3">
+                    <div class="aspas">"</div>
+                    <blockquote>
+                        <p>"O pessoal do COMAC é muito paciente. Aprendi coisas que nem sabia que existiam. Recomendo!"</p>
+                    </blockquote>
+                    <cite>— Ana Oliveira, 75 anos</cite>
+                </div>
+                
+                <div class="navegacao-depoimentos">
+                    <button onclick="mudarDepoimento(-1)" aria-label="Depoimento anterior">◀️</button>
+                    <button onclick="mudarDepoimento(1)" aria-label="Próximo depoimento">▶️</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="grade-rodape">
+                <div class="coluna-rodape">
+                    <h4>COMAC</h4>
+                    <p>Inclusão Digital para a Terceira Idade</p>
+                    <p>Transformando vidas através da tecnologia</p>
+                </div>
+                
+                <div class="coluna-rodape">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="paginas/tutoriais.html">Tutoriais</a></li>
+                        <li><a href="paginas/agendamentos.html">Agendamentos</a></li>
+                        <li><a href="paginas/contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="coluna-rodape">
+                    <h4>Contato</h4>
+                    <p>📍 Endereço da COMAC</p>
+                    <p>📞 (00) 00000-0000</p>
+                    <p>✉️ ajuda@comac.org.br</p>
+                </div>
+                
+                <div class="coluna-rodape">
+                    <h4>Horário de Atendimento</h4>
+                    <p>Segunda a Sexta: 8h às 17h</p>
+                    <p>Sábado: 8h às 12h</p>
+                    <p>Domingo: Fechado</p>
+                </div>
+            </div>
+            
+            <div class="rodape-inferior">
+                <p>&copy; 2024 COMAC - Inclusão Digital para Idosos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante de Ajuda -->
+    <button class="botao-ajuda-flutuante" onclick="abrirChat()" aria-label="Precisa de ajuda?">
+        <span>❓</span>
+        <span class="tooltip">Precisa de ajuda?</span>
+    </button>
+
+    <!-- Modal de Tutorial -->
+    <div id="modalTutorial" class="modal" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" onclick="fecharModal()" aria-label="Fechar">&times;</button>
+            <h2 id="tituloModal">Tutorial</h2>
+            <div class="conteudo-modal" id="conteudoModal">
+                <!-- Conteúdo do tutorial carregado aqui -->
+            </div>
+            <div class="controles-tutorial">
+                <button onclick="tutorialAnterior()">◀ Anterior</button>
+                <button onclick="tutorialProximo()">Próximo ▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/acessibilidade.js"></script>
+</body>
+</html>
