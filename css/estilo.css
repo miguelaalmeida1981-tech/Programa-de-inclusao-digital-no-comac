@@ -1,0 +1,18 @@
+/* ==========================================
+   ESTILO COMAC - INCLUSÃO DIGITAL IDOSOS
+   ========================================== */
+
+/* Reset e Variaveis */
+:root {
+    --cor-primaria: #4F46E5;
+    --cor-secundaria: #7C3AED;
+    --cor-sucesso: #10B981;
+    --cor-perigo: #EF4444;
+    --cor-aviso: #F59E0B;
+    
+    --fundo-claro: #F9FAFB;
+    --fundo-card: #FFFFFF;
+    --texto-principal: #1F2937;
+    --texto-secundario: #6B7280;
+    
+    --sombra-card: 0 4px 6px -1px rgba(0, 0
