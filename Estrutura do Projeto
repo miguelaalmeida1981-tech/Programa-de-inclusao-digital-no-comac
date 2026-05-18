@@ -1,0 +1,14 @@
+comac-digital/
+├── index.html
+├── css/
+│   ├── estilo.css
+│   └── acessibilidade.css
+├── js/
+│   ├── main.js
+│   ├── tutoriais.js
+│   └── acessibilidade.js
+└── paginas/
+    ├── tutoriais.html
+    ├── agendamentos.html
+    ├── noticias.html
+    └── contato.html
